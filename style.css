@@ -1,288 +1,37 @@
-/* Google Font CDN Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  scroll-behavior: smooth;
-}
+const App = () => {
+  return (
+    <div className="min-h-screen bg-pink-100 flex items-center justify-center">
+      <div className="grid grid-cols-1 gap-4 p-4 w-full max-w-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Card className="rounded-2xl shadow-lg bg-pink-200 border border-pink-300">
+            <CardContent>
+              <h1 className="text-2xl font-bold text-pink-700 mb-2">Welcome to the App!</h1>
+              <p className="text-pink-600">This is a girly-themed card with soft pink tones.</p>
+            </CardContent>
+          </Card>
+        </motion.div>
 
-/* Custom Scroll Bar CSS */
-::-webkit-scrollbar {
-  width: 10px;
-}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Button className="bg-pink-500 text-white hover:bg-pink-600 py-2 px-4 rounded-full shadow-md">
+            Click Me
+          </Button>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
 
-::-webkit-scrollbar-track {
-  background: #fce4ec;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #f48fb1;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #ec407a;
-}
-
-/* navbar styling */
-nav {
-  position: fixed;
-  width: 100%;
-  padding: 20px 0;
-  z-index: 998;
-  transition: all 0.3s ease;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-nav.sticky {
-  background: #ec407a;
-  padding: 13px 0;
-}
-
-nav .navbar {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-}
-
-nav .navbar .logo a {
-  font-weight: 500;
-  font-size: 35px;
-  color: #ec407a;
-}
-
-nav.sticky .navbar .logo a {
-  color: #fff;
-}
-
-nav .navbar .menu {
-  display: flex;
-  position: relative;
-}
-
-nav .navbar .menu li {
-  list-style: none;
-  margin: 0 20px;
-}
-
-.navbar .menu a {
-  font-size: 18px;
-  font-weight: 500;
-  color: #6a1b9a;
-  padding: 6px 0;
-  transition: all 0.4s ease;
-}
-
-.navbar .menu a:hover {
-  color: #ec407a;
-}
-
-nav.sticky .menu a {
-  color: #FFF;
-}
-
-nav.sticky .menu a:hover {
-  color: #6a1b9a;
-}
-
-.navbar .media-icons a {
-  color: #ec407a;
-  font-size: 18px;
-  margin: 0 6px;
-}
-
-nav.sticky .media-icons a {
-  color: #FFF;
-}
-
-/* Side Navigation Menu Button CSS */
-nav .menu-btn,
-.navbar .menu .cancel-btn {
-  position: absolute;
-  color: #fff;
-  right: 30px;
-  top: 20px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: none;
-}
-
-nav .menu-btn {
-  color: #ec407a;
-}
-
-nav.sticky .menu-btn {
-  color: #FFF;
-}
-
-/* home section styling */
-.home {
-  height: 100vh;
-  width: 100%;
-  background: url("images/background-pink.png") no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-.home .home-content {
-  width: 90%;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.home .text-one {
-  font-size: 25px;
-  color: #6a1b9a;
-}
-
-.home .text-two {
-  color: #6a1b9a;
-  font-size: 75px;
-  font-weight: 600;
-  margin-left: -3px;
-}
-
-.home .text-three {
-  font-size: 40px;
-  margin: 5px 0;
-  color: #ec407a;
-}
-
-.home .text-four {
-  font-size: 23px;
-  margin: 5px 0;
-  color: #6a1b9a;
-}
-
-.home .button {
-  margin: 14px 0;
-}
-
-.home .button button {
-  outline: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 25px;
-  font-weight: 400;
-  background: #ec407a;
-  color: #fff;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.4s ease;
-}
-
-.home .button button:hover {
-  border-color: #ec407a;
-  background-color: #fff;
-  color: #ec407a;
-}
-
-/* About Section Styling */
-section {
-  padding-top: 40px;
-}
-
-section .content {
-  width: 80%;
-  margin: 40px auto;
-  font-family: 'Poppins', sans-serif;
-}
-
-.about .about-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-section .title span {
-  color: #6a1b9a;
-  font-size: 30px;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 8px;
-}
-
-section .title span::before,
-section .title span::after {
-  content: '';
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: #ec407a;
-  left: 0;
-  bottom: 0;
-}
-
-section .title span::after {
-  bottom: -7px;
-  width: 70%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.about .about-details .left {
-  width: 45%;
-}
-
-.about .left img {
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.about-details .right {
-  width: 55%;
-}
-
-section .topic {
-  color: #6a1b9a;
-  font-size: 25px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.about-details .right p {
-  text-align: justify;
-  color: #6a1b9a;
-}
-
-/* My Skills CSS */
-.skills {
-  background: #fce4ec;
-}
-
-.skills .skills-details p {
-  color: #6a1b9a;
-}
-
-.skills-details .experience .num {
-  color: #6a1b9a;
-}
-
-.skills-details .boxes .topic {
-  font-size: 20px;
-  color: #ec407a;
-}
-
-.skills-details .boxes .per {
-  font-size: 60px;
-  color: #ec407a;
-}
-
-/* My Services CSS */
-.services .boxes .box {
-  box-shadow: 0 5px 10px rgba(236, 64, 122, 0.3);
-}
+export default App;
