@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <title>Portfolio</title>
+    <title>Professional Portfolio</title>
 </head>
 <body>
     <nav>
@@ -14,91 +14,26 @@
             <i class="hamburg fas fa-bars" onclick="hamburg()"></i>
             <i class="cancel fas fa-times" onclick="cancel()"></i>
             <div class="links">
-                <a href="#home" aria-label="Navigate to Home">Home</a>
-                <a href="#about" aria-label="Navigate to About">About</a>
-                <a href="#projects" aria-label="Navigate to Projects">Projects</a>
-                <a href="#contact" aria-label="Navigate to Contact">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
         <div class="dropdown">
             <div class="links">
-                <a href="#home" aria-label="Navigate to Home">Home</a>
-                <a href="#about" aria-label="Navigate to About">About</a>
-                <a href="#projects" aria-label="Navigate to Projects">Projects</a>
-                <a href="#contact" aria-label="Navigate to Contact">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
-
-    <section id="home">
-        <div class="main-container">
-            <div class="content">
-                <h1>Hello, I'm a <span>Creative</span></h1>
-                <div class="typewriter">
-                    <span class="typewriter-text">Designer | Developer | Creator</span>
-                </div>
-                <p>Welcome to my portfolio. I specialize in creating amazing user experiences and designs.</p>
-                <button onclick="scrollToSection('about')">Learn More</button>
-                <div class="social-links">
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="image">
-                <img src="profile.jpg" alt="Profile Image" class="profile-img">
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate designer and developer with expertise in creating modern and responsive web applications.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Description of Project 3.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
+    <main id="content">
+        <!-- Dynamic content will load here -->
+    </main>
     <footer>
         <p>© 2025 MyPortfolio. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Smooth scroll to sections
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
