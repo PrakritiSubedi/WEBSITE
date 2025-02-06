@@ -14,16 +14,16 @@ function cancel() {
 }
 
 // Typewriter Effect
-const texts = ["DEVELOPER", "DESIGNER", "YOUTUBER"];
+const texts = ["DEVELOPER", "DESIGNER", "CREATOR"];
 let speed = 100;
 const textElements = document.querySelector(".typewriter-text");
 let textIndex = 0;
-let charcterIndex = 0;
+let charIndex = 0;
 
 function typeWriter() {
-    if (charcterIndex < texts[textIndex].length) {
-        textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
-        charcterIndex++;
+    if (charIndex < texts[textIndex].length) {
+        textElements.innerHTML += texts[textIndex].charAt(charIndex);
+        charIndex++;
         setTimeout(typeWriter, speed);
     } else {
         setTimeout(eraseText, 1000);
@@ -36,9 +36,19 @@ function eraseText() {
         setTimeout(eraseText, 50);
     } else {
         textIndex = (textIndex + 1) % texts.length;
-        charcterIndex = 0;
+        charIndex = 0;
         setTimeout(typeWriter, 500);
     }
 }
 
 window.onload = typeWriter;
+
+// Smooth scrolling
+document.querySelectorAll("a[href^='#']").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+        });
+    });
+});
