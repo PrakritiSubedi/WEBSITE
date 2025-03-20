@@ -29,7 +29,45 @@
                 <div class="typewriter">
                     <span class="typewriter-text"></span>
                 </div>
-                <p>Welcome to my portfolio. I specialize in creating amazing user experiences and designs.</p>
+                <p>LAB 1     import pandas as pd
+
+import numpy as np
+
+
+import seaborn as sns
+
+
+# 1. Creating Dataset
+
+data = {
+
+'CustomerID': ['C001', 'C002', 'C003', 'C004', 'C004', 'C005', 'C006', 'C007', 'C008', 'C008'],
+
+'Name': ['John', 'Alice', 'BOB', 'BOBY', 'Eve', 'eve', 'Steve', 'Ramu', 'mary', 'Bob'],
+
+'Age': [25, 34, 17, 29, 29, 120, -5, np.nan, 220, 30],
+
+'JoinDate': ['12/1/2024', '11/15/2023', '6/1/2022', '6/1/2022', '12/5/2024', 'invalid_date', np.nan, '1/1/2024', '3/5/2023', '3/5/2023'],
+
+'MonthlyCharges': [29.85, 56.95, 4000, 75.5, 75.5, 45.99, 60, 49.99, -30, 55],
+
+'Churn': ['No', 'Yes', 'No', 'No', 'No', 'Yes', 'No', np.nan, 'Yes', 'No']
+
+}
+
+df = pd.DataFrame(data)
+
+print("Dataset Information:\n", df.info())
+
+print("Dataset Description:\n", df.describe())
+
+print("Shape of Dataset:\n", df.shape)
+
+print("First Five Rows:\n", df.head())
+
+print("Last Five Rows:\n", df.tail())
+
+print("Rows from index 3 to 5:\n", df.iloc[3:6])                          </p>
                 <button>That's the wrap</button>
                 <div class="social-links">
                     <i class="fab fa-facebook-f"></i>
